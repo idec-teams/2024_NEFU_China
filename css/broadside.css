@@ -1,0 +1,61 @@
+/*侧边标题*/
+.broadside{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    width: 23vw;
+    margin-top: 33vw;
+    margin-left: 5vw;
+    z-index: 150;
+    font-size: 1.6vw;
+    
+}
+
+.broadside a{
+    text-decoration: none;
+    
+}
+.broadside a:hover {/*响应后的样式*/
+    color: #c1dd0d;
+    font-size: 1.7vw;
+    text-shadow:
+                0.01vh 0.01vh 0 #0000002f, /* Right-down shadow */
+                -0.01vh -0.01vh 0 #00000029, /* Left-up shadow */
+                0.01vh -0.01vh 0 #00000030, /* Right-up shadow */
+                -0.01vh 0.01vh 0 #0000002d; /* Left-down shadow */
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1.05);
+}
+.broadside_element {/*响应前的样式*/
+    /*width: 19vw;
+    max-width: 19vw;*/
+    margin-top: 0.5vw;
+    color: #904e2e;
+    justify-content: flex-start;
+    
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for the style change */
+
+}
+
+.sidess {
+    display: none;
+}
+
+.submenu {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1vw;
+  }
+
+  .submenu a {
+    font-size: 1.4vw;
+    color: #c07c55;
+    padding: -0.5vw;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .submenu a:hover {
+    color: #feb737;
+    font-size: 1.5vw;
+}
