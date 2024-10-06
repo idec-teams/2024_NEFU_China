@@ -1,0 +1,11 @@
+/*进度条*/
+#progress-bar {
+    position: fixed;
+    top: 0vh;
+    left: 0vw;
+    width: 0;
+    height: 0.5vh;
+    background: linear-gradient(to right, #7fb4ea, #35488f);
+    z-index: 150;
+    transition: width 0.25s ease-out;
+}

@@ -1,0 +1,56 @@
+:root {  
+    --content-width: 70vw; /* 文字块宽度 */  
+}  
+
+
+.toggle-button {  
+    width: var(--content-width);  
+    font-size: 1.5em;  
+    cursor: pointer;  
+    background-color: #7fb4ea;  
+    color: white;  
+    border: none;  
+    border-radius: 5px;  
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;  
+    padding: 2vw 4vw;  
+    margin-bottom: 10px;  
+}  
+
+.toggle-button:hover {  
+    background: linear-gradient(40deg, #0056b3, #007BFF);  
+    transform: translateY(2px);  
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);  
+}  
+
+.content {  
+
+    max-height: 0;  
+    transition: max-height 0.1s ease-out, opacity 0.5s ease-out, padding 0.5s ease-out;  
+    opacity: 0; /* 用于在收起时提供平滑过渡 */  
+    width: var(--content-width);  
+    background-color: #e3f4fc;  
+    border: 1px solid #ccc;  
+    border-radius: 5px;  
+    font-size: 1.0em;  
+    color: #333;  
+    padding: 0 15px; /* 初始时隐藏内边距 */  
+    box-sizing: border-box;  
+    display: none;
+}  
+
+.content.show {  
+    max-height: none; /* 实际上不设置具体高度，而是让内容自然展开 */  
+    opacity: 1;  
+    padding: 10px 15px; /* 展开时显示内边距 */  
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out, padding 0.5s ease-out;  
+    display: block;
+}  
+
+.content a{
+    font-size: 1.2em;
+}
+
+/* 添加一个过渡类，用于在内容高度变化前后暂时禁用过渡效果 */  
+.content.transition-none {  
+    transition: none;  
+}  

@@ -1,0 +1,40 @@
+.custom-text-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Oswald', sans-serif;
+    z-index: 2;
+    font-size: 12vw;
+    height: 33vw;
+    margin-left: -45vw;
+    max-width: 25vw;
+
+  }
+  
+  .custom-text-container .custom-letter {
+    color: #5d331e;/*color: rgb(52, 38, 0);*/
+    font-weight: bold;
+    display: inline-block;
+    letter-spacing: 0.5vw; /* 将 5px 调整为 0.5vw */
+    transition: 1.0s;
+    text-shadow: 0px 0px 0px #348100;
+    position: relative;
+    top: 0vw;
+    left: 0vw;
+    cursor: default;
+  }
+  
+  .custom-text-container .custom-letter:hover {
+    text-shadow: -0.8vw 0.8vw 0px #f7d169; /* 将 -8px 8px 转换为 vw */
+    transition: 0.8s;
+    top: -0.8vw; /* 将 -8px 调整为 -0.8vw */
+    left: 0.8vw; /* 将 8px 调整为 0.8vw */
+  }
+  
+  .custom-text-container .custom-space {
+    width: 2vw; /* 将 20px 调整为 2vw */
+    height: 100%;
+  }
+  
