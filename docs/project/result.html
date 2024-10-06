@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iDEC NEFU_China 2024</title>
+    <link rel="stylesheet" href="..\css\mouse2.css">
+    <link rel="stylesheet" href="..\css\broadside.css">
+    <link rel="stylesheet" href="..\css\progress-bar.css">
+    <link rel="stylesheet" href="..\css\top_button.css">
+    <link rel="stylesheet" href="..\css\shadow.css">
+    <link rel="stylesheet" href="..\css\nav.css">
+    <link rel="stylesheet" href="..\css\footer.css">
+    <link rel="stylesheet" href="..\css\member.css">
+    <link rel="stylesheet" href="..\css\member_img.css">
+    <link rel="stylesheet" href="..\css\loading.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            overflow-x: hidden;
+            flex-direction: column; /* 垂直布局 */
+            min-height: 100vh; /* 确保 body 至少占据视口高度 */
+            justify-content: flex-start; /* 从顶部开始排列内容 */
+            align-items: center; /* 中心对齐内容 */
+            background-color: #e3f4fc;
+            background-size: cover;
+            max-width: 100%;
+            /*font-family: Nunito-Reg, sans-serif;*/
+            font-weight: 400;
+            font-size: 18px;
+            /*font-family: Comic Sans Ms, sans-serif;*/
+            color: #000000;
+        }
+        img {
+            display: inline-block;
+            vertical-align: middle;
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+        }
+        .img2 {
+            display: inline-block;
+            margin: 0 auto;
+            text-align: center;
+            gap: 20px;
+            height: auto;
+        }
+        .container {/*框架*//*最外层盒子*/
+            display: flex;
+            width: 65vw;
+            height: auto;/*似乎这个值没用，会被撑大*//*要管*/
+            max-width: 65vw; /* 设置内容区域的最大宽度 */
+            margin-left: 49.5vh;
+            background-color: transparent;
+            /*padding: 20px; /* 内容内边距 */
+            /*padding-top: 80px;/*80*/
+
+            box-sizing: border-box;
+            z-index: 2;
+        }
+
+        .container_block{
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            padding: 5vw;
+            padding-top: 2vw;
+            border-radius: 1vw;
+            border: 2px solid #7fb4ea; 
+            backdrop-filter: blur(15px) saturate(130%); 
+
+        }
+        .container0{
+            width: 100%;  
+            height: auto;
+           /* max-width: 100vw; */
+            margin-top: 0vh;
+            margin-bottom: 0vh; 
+            align-items: center;
+            /*gap: 1vw;  must kill*/
+            z-index: 3;
+            background: #ffffff;
+            display: flex;
+            flex-direction: column;
+        }
+        .container01{
+            width: 100%;
+            /*max-width: 70vw;*/
+            margin-left: 0vw;
+            /*align-items: center;*/
+            gap: 1vw;
+            display: flex;
+            flex-direction: column;
+        }
+        .container02{
+            width: 100%;
+            /*max-width: 70vw;*/
+            margin-left: 0vw;
+            margin-top: 2vw;
+           /* align-items: center;*/
+            gap: 1vw;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        p {
+           
+            max-width: 60vw;
+            margin-top: 1vw;
+            font-size: 1.5vw; 
+            /*font-family: Comic Sans Ms, sans-serif;*/
+            text-align: justify;
+            font-style: normal;
+            line-height: normal;
+        }
+        ol{
+            
+            list-style-position: inside; /* 列表样式在内侧 */
+        }
+        ol li {
+            max-width: 65vw;
+            margin-top: 1vw;
+            font-size: 1.5vw; 
+            text-align: justify;
+            /*font-family: Comic Sans Ms, sans-serif;*/
+        }
+        .h1{
+            justify-content: center;
+            text-align: left;
+            max-width: 60vw;
+            margin-top:2vw;
+            font-size: 3.0vw;
+            font-weight: 600;
+            color: #35488f;
+
+            letter-spacing: 0.5vh;
+            text-shadow: 0.1vh 0.1vh 0 #000000, 0.2vh 0.2vh 0 #000000, 0.2vh 0.2vh 0 #000000;
+
+        }
+        .h2{
+            color: #7fb4ea;
+            text-align: left;
+            font-weight: 600;
+            font-size: 2.4vw;
+            margin-top:0.5vw;
+            margin-bottom: 0;
+            /*font-family: Montserrat-Mid; */
+        
+        }
+        .h3{ 
+            margin-top: 2vh;
+            font-size: 1.7vw; 
+            /*font-family: Montserrat-Mid; */
+
+        }
+        @media (max-width: 1050px) {
+            .container {
+                margin-left: 0;
+                width: 90vw;
+                max-width: 90vw;
+            }
+            .broadside{
+                display: none;
+            }
+            .h1,h2,p,ol li{
+                max-width: 80vw;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+
+    
+    <div class="ripple"></div>
+    
+    <div id="progress-bar"></div>
+
+    <div class="top_button">
+        <img src = "..\stactic\images\topimgs\top.png"  style="width: 15vw; height: auto; margin-left: -0.3vw;"> 
+        <a href="" class="top_button" id="top_button"></a>
+    </div>
+    
+
+
+    <div class="loading">
+        <div class="loading_background"></div>
+        <div class="groups">
+            <img src = "..\stactic\images\loading_img\loading1.png"  style="width: 50vw; height: auto;">
+            <div class="loadingss">
+                <div class="load_text">
+                    <div class="load_letter" style="animation-delay: 0s;">L</div>
+                    <div class="load_letter" style="animation-delay: 0.1s;">O</div>
+                    <div class="load_letter" style="animation-delay: 0.2s;">A</div>
+                    <div class="load_letter" style="animation-delay: 0.3s;">D</div>
+                    <div class="load_letter" style="animation-delay: 0.4s;">I</div>
+                    <div class="load_letter" style="animation-delay: 0.5s;">N</div>
+                    <div class="load_letter" style="animation-delay: 0.6s;">G</div>
+                    <div class="load_letter" style="animation-delay: 0.7s;">
+                        <img src = "..\stactic\images\loading_img\loading2.png"  style="width: 11vw; height: auto;"> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="header" class="nav_header">
+        <div class="logo" style="margin-left: 3vw;"> 
+            <img src = "..\stactic\images\idec_img\logo.png"  style="width: 9vw; height: auto;"> 
+        </div>  
+        <nav>
+            <ul>
+                <li class="dropdown">
+                    <a href="https://idec-teams.github.io/2024_NEFU_China/" class="nav_ul_li_a">Home</a> 
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="nav_ul_li_a">Team</a>
+                    <ul class="nav_ul_li_a_ul">
+                        <li><a href="..\team\member.html">Members</a></li>
+                        <li><a href="..\team\attribution.html">Attribution</a></li>
+                    </ul>        
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="nav_ul_li_a">Project</a>
+                    <ul class="nav_ul_li_a_ul">
+                        <li><a href="background.html">Background</a></li>
+                        <li><a href="design.html">Design</a></li>
+                        <li><a href="result.html">Result</a></li>
+                        <li><a href="..\stactic\pdf\report\Report.pdf" target="_blank">Report</a></li>
+                        <li><a href="..\stactic\pdf\Supplementary Materials\Supplementary Materials.pdf"  target="_blank">Supplementary Information</a></li>
+                    </ul>        
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="nav_ul_li_a">Documentation</a>     
+                    <ul class="nav_ul_li_a_ul">
+                        <li><a href="..\documentation\notebook.html">Notebook</a></li>
+                        <li><a href="..\documentation\safety.html">Safety</a></li>
+                        <li><a href="..\documentation\protocol.html">Protocol</a></li>
+                    </ul>  
+                </li>
+                
+            </ul>
+        </nav>
+        <div id="menu-icon"><span class="first"></span><span class="second"></span><span class="third"></span></div>
+    </div>
+
+      
+
+
+    <div class="broadside" >
+        <a class="broadside_element side1" href="#side1"  >
+            1.Development and Screening of Whole-Cell Biosensors and Mutants
+            <div class="submenu"></div>
+        </a>
+
+        <a class="broadside_element side2" href="#side2">
+            2.Machine Learning-Based Protein Optimization and Molecular Mechanism Study
+            <div class="submenu"></div>
+        </a>
+
+        <a class="broadside_element side3" href="#side3">
+            3.Optimization of Metabolic Pathways to Increase PX Yield
+            <div class="submenu"></div>
+        </a>
+
+        <a class="broadside_element side4" href="#side4">
+            References
+            <div class="submenu"></div>
+        </a>
+        
+    </div>
+
+
+    <div style="height: 88px;"></div>
+    <div>
+        <img src = "..\stactic\images\topimgs\result.png"  style="width: 100vw; height: auto;"> 
+    </div>
+
+
+
+    <div class="container">
+        
+        <div class="container0 container_block">   
+            
+            <div class="container01 section1" id="side1">
+                <div class="h1">1.Development and Screening of Whole-Cell Biosensors and Mutants</div>
+                <div class="h2">1.1 Development and Validation of the Whole-Cell Biosensor</div>
+                <p >The sensor comprises a catalytic module, NdmB, and a sensor module, the pYB1s-ndmDCEA plasmid. Bacteria can only survive when NdmB catalyzes caffeine to produce paraxanthine (PX), and pYB1s-ndmDCEA degrades PX into xanthine. To validate the effectiveness of the sensor system, the pYB1s-ndmDCEA plasmid was introduced into an <em>Escherichia coli</em> (<em>E. coli</em>) strain with the <em>guaB</em> gene knocked out. Control experiments revealed that the strain showed optimal growth in media containing xanthine and PX, in contrast to media supplemented with theobromine (Tb), theophylline (Tp), caffeine, or media without additional xanthine compounds. These results confirmed the necessity of PX for bacterial growth (Figure 1A). Moreover, different concentrations of PX were tested to observe bacterial growth, and a positive correlation between growth and PX concentration was observed, demonstrating that the sensor successfully detects and utilizes PX (Figure 1B).</p>
+                <img src = "..\stactic\images\result_img\result1.png"  style="width: 54vw; height: auto;"> 
+                <p>Figure 1: Validation of the Whole-Cell Biosensor for PX. (A) OD<sub>600</sub> values of bacterial growth under different substrate conditions. The most significant growth was observed in media containing PX. (B) The effect of PX concentration on bacterial growth. A positive correlation between bacterial growth and PX concentration demonstrates that the sensor successfully detects and utilizes PX.</p>
+                <div class="h2">1.2 Screening of NdmB Mutants Using the Whole-Cell Biosensor</div>
+                <p >After confirming the functionality of the whole-cell biosensor, we used it to screen NdmB mutants with enhanced caffeine degradation capabilities. Based on previously reported key sites, we performed combinatorial mutations at two sets of sites (Q289 and L293, and W256, C267, and M271) and screened the viable strains using the sensor plasmid (Figure 2).</p>
+                <img src = "..\stactic\images\result_img\result2.png"  style="width: 54vw; height: auto;">
+                <p>Figure 2. NdmB combinatorial mutations. (A) Mutations at positions Q289 and L293. (B) Mutations at positions W256, C267, and M271. (C) This figure summarizes the mutation types and their corresponding products. Strains with higher OD<sub>600</sub> values produce not only hypoxanthine but also other methylxanthine compounds (e.g., 1-MX and 7-MX). Among the mutants, those that directly produce xanthine constitute the majority.</p>
+                <p>During the experiment, <em>E. coli</em> strains carrying the mutant <em>ndmB</em> gene were inoculated into the medium, and after inducing protein expression, the supernatant was removed by centrifugation. Then, a caffeine-containing transformation solution prepared with 1X M9 buffer was added for whole-cell catalysis. After the catalysis was completed, 200 µL of the supernatant was transferred to a 96-well plate, and the whole-cell biosensor was added. By monitoring the growth of <em>E. coli</em> with the <em>guaB</em> gene knocked out, we screened strains with higher OD<sub>600</sub> values (Figure 3). The reaction products were then detected using high-performance liquid chromatography (HPLC) and the strains were sequenced for validation.</p>
+                <img src = "..\stactic\images\result_img\result3.png"  style="width: 54vw; height: auto;">
+                <p>Figure 3. Schematic diagram of the directed evolution and mutant screening process for NdmB.The process includes: (1) Site-directed mutagenesis of key residues in NdmB using degenerate primers; (2) Transformation of recombinant plasmids into <em>E. coli</em> DH5α competent cells for amplification; (3) Plasmid extraction and transformation into the <em>E. coli</em> BW25113 strain; (4) Induction of mutant NdmB expression in deep-well plates containing arabinose and IPTG; (5) Addition of 1 × M9 medium and caffeine for whole-cell catalysis; (6) Collection of the supernatant by centrifugation, transfer to a 96-well plate; (7) Addition of the whole-cell biosensor; (8) Monitoring of bacterial growth curves to evaluate the catalytic efficiency of each mutant in producing PX.</p>
+                <div class="h2">1.3 Screening Results Analysis</div>
+                <p >After conducting HPLC to detect the reaction products and DNA sequencing to determine the mutant sequences, we analyzed the mutation types and their associated products . Surprisingly, the strains with high OD<sub>600</sub> values produced not only PX but also other methylxanthine derivatives, such as 1-MX and 7-MX. These compounds were also converted into xanthine in the sensing module, allowing the strains to survive. This indicates that NdmB mutants gained demethylation activity not only at the N3 position but also at the N1 and even N7 positions (Figure 4). The diversity of products generated by these NdmB mutants significantly increased the complexity of our screening, and further investigation was necessary to identify mutants that could selectively promote PX production.</p>
+                <img src = "..\stactic\images\result_img\result4.png"  style="width: 54vw; height: auto;">
+                <p>Figure 4. Screening results and by-product analysis of NdmB mutants.(A) Screening results of mutants using the PX whole-cell biosensor. The figure highlights positive clones with higher OD<sub>600</sub> values (in orange), indicating that these strains likely have a stronger capability for PX production. (B and C) HPLC analysis of the standard curves for products from different strains. The analysis confirmed that the mutants produced not only PX but also other demethylated by-products, such as 1-MX and 7-MX.</p>
+            </div>
+
+            <div class="container01 section1" id="side2">
+                <div class="h1">2.Machine Learning-Based Protein Optimization and Molecular Mechanism Study</div>
+                <div class="h2">2.1 Machine Learning</div>
+                <p>The integration of machine learning with evolutionary engineering can significantly enhance the efficiency and effectiveness of protein optimization<sup>1</sup>. To identify mutation sites favoring PX production, we employed a Ridge regression model for machine learning analysis. Analysis of the regression coefficients revealed that mutations at Q289 showed a strong positive effect on the synthesis of both PX and 7-MX, while their impact on other byproducts was relatively minor. The experimental results provide critical insights for subsequent site-directed mutagenesis experiments at Q289 (Figure 5).</p>
+                <img src = "..\stactic\images\result_img\result5.png"  style="width: 54vw; height: auto;">
+                <p>Figure 5. The Ridge regression model analyzed the influence of five mutation sites (W256, C267, M271, Q289, L293) on the generation of different products.Positive regression coefficients indicated that the mutations had a favorable effect on methylxanthine production, with Q289 mutations significantly enhancing the production of PX and 7-MX, while other sites tended to promote the formation of different demethylated products.</p>
+                <div class="h2">2.2 Site-Directed Saturation Mutagenesis and Functional Optimization of the Q289 Residue</div>
+                <p>Based on the predictions from the machine learning model, we designed degenerate primers to perform site-directed saturation mutagenesis at Q289. The mutants were screened using the whole-cell biosensor, and strains with higher OD<sub>600</sub> values were selected for further analysis through HPLC and DNA sequencing. The experimental data revealed two key findings: first, when Q289 was mutated to threonine(NdmB<sup>Q289T</sup>), PX production increased significantly, reaching 1.22 g/L (6.76 mM),which is 7.3 times higher than the previously reported maximum yield. Second, as the side chain (R-group) decreased in size (threonine → serine → alanine), a distinct shift in the types and ratios of products was observed: smaller R-groups resulted in a gradual decrease in PX production, while the yield of 7-MX increased accordingly. This pattern indicates that the size of the R-group at the position 289 significantly influences the enzyme's substrate selectivity: as the R-group becomes smaller, NdmB not only catalyzes N3-demethylation but also exhibits N1-demethylation activity (Figure 6).</p>
+                <img src = "..\stactic\images\result_img\result6.png"  style="width: 54vw; height: auto;">
+                <p>Figure6. HPLC analysis of catalytic products from NdmB mutants. The NdmB<sup>Q289T</sup> mutant exhibited a significant increase in PX production, while the NdmB<sup>Q289A</sup> mutant showed a preference for producing 7-MX. Larger R-groups (such as threonine) favor PX production, while smaller R-groups (such as alanine) tend to generate 7-MX.</p>
+                <div class="h2">2.3 Molecular Docking and Molecular Dynamics Simulations </div>
+                <p>Site-directed mutagenesis may have a profound impact on the selection of enzymes with desired activities<sup>2</sup>. To precisely simulate the behavior of the target protein under whole-cell catalysis conditions, we optimized the NdmB structure obtained from the PDB using molecular dynamics (MD) simulations. MD simulations allow us to track the conformational dynamics of proteins at the atomic level. After generating the models for wild-type NdmB and its mutants (NdmB<sup>Q289T</sup>, NdmB<sup>Q289S</sup>, and NdmB<sup>Q289A</sup>), we performed molecular docking of caffeine with NdmB . The interactions between NdmB and methylxanthine structures, including steric hindrance and hydrogen bonding, jointly regulated substrate positioning within the active site.</p>
+                <p>The docking results indicated that the steric hindrance of Q289 affected PX production (Figure 7A and 7B). Furthermore, when PX was used as a substrate, its carbonyl group interacted with the Thr residue, preventing PX from entering the active pocket further. This simulation likely explains the NdmB<sup>Q289T</sup> mutant's specificity for N3-demethylation (Figure 7C). In the NdmB<sup>Q289S</sup> mutant, once PX entered the activesite, a part of it was further converted to 7-MX, while the rest remained unreacted due to steric hindrance from the Ser residue's flexible side chain (Figure 7D and 7E). In the NdmB<sup>Q289A</sup> mutant, PX did not interact with NdmB<sup>Q289A</sup>, allowing the N1-methyl group of PX to approach closer to the active center, thereby increasing 7-MX production (Figure 7F). Overall, the site-directed saturation mutagenesis of Q289 significantly produced multiple mutants with different efficiency of demethylation reactions, which offered valuable insights for future enzyme engineering.</p>
+                <img src = "..\stactic\images\result_img\result7.png"  style="width: 54vw; height: auto;">
+                <p>Figure 7. Molecular docking analysis of NdmB mutants with substrates.(A) Docking analysis of wild-type NdmB with caffeine, showing that the key residue NdmB<sup>Q289T</sup> blocks caffeine from entering the active pocket. (B) Docking analysis of NdmB<sup>Q289T</sup> with caffeine indicates that reduced steric hindrance allows the N3 methyl group of caffeine to approach the active center at a distance of 3.5 Å. (C) Docking analysis of NdmB<sup>Q289T</sup> with PX reveals that the absence of the N3 methyl group exposes a carbonyl group that interacts with the Thr residue, which prevents further demethylation. (D and E) Docking analysis of NdmB<sup>Q289S</sup> with PX demonstrates steric effects from the Ser side chain,partially converting PX to 7-MX. (F) Docking analysis of NdmB<sup>Q289A</sup> with PX indicates that lack of A289 interaction with PX allows the N1 methyl group to approach the active center, leading to increased production of 7-MX.</p>
+                <p>We conducted molecular dynamics simulations of wild-type NdmB and the NdmB<sup>Q289T</sup> mutant. The results showed that over time, the distance between the N3-methyl group and the non-heme iron in both the wild-type and mutant proteins became similar in the later stages of the simulation, indicating that proximity to the non-heme iron is not the sole determinant of wild-type reactivity (Figure 8A). RDF (radial distribution function) analysis revealed that the RDF profiles of the wild-type and mutant were generally similar. However, the mutant exhibited a slightly higher peak and slower decline, suggesting that the mutation induced local structural changes, resulting in stronger interactions with surrounding molecules or a higher distribution density, leading to a more stable binding between the mutant and caffeine (Figure 8B). PCA (principal component analysis) of vec1 showed significant differences between the wild-type and mutant, reflecting different motion patterns over the simulation time and indicating distinct overall motion trajectories (Figure 8C). The regions of positive covariance in the wild-type were relatively sparse, indicating less coordination in the overall motion of NdmB. In contrast, the positive covariance values between atoms in the mutant were more concentrated, and the areas of negative covariance in NdmB<sup>Q289T</sup> were reduced, suggesting that the atoms in the mutant exhibited more coordinated and focused movements during the simulation, which could imply greater structural stability or more efficient binding with the caffeine substrate (Figures 8D and 8E). Analysis of the atoms near caffeine revealed that the mutation affected the openness of the active site. Compared to the wild-type, the mutant displayed a smaller interaction area (Figure 8F). This supports the “two-pocket” hypothesis, which proposes that the mutation creates a more confined pocket, better positioning caffeine for interaction with the non-heme iron, whereas the wild-type interacts with more residues. In the wild-type active site pocket, the methyl group of caffeine is blocked by surrounding residues, preventing direct contact with the non-heme iron (Figure 8G). In the mutant, caffeine is positioned more favorably, with reduced spatial hindrance, allowing better alignment of the methyl group with the non-heme iron (Figure 8H). This confirms the “two-pocket” hypothesis, indicating that the mutant creates a more direct pathway for interaction with the non-heme iron.</p>
+                <img src = "..\stactic\images\result_img\result8.png"  style="width: 54vw; height: auto;">
+                <p>Figure 8. Analysis of Caffeine Binding in Wild-Type NdmB and Mutant NdmB<sup>Q289T</sup>. (A) Analysis of the distance between the N3-methyl group and non-heme iron. (B) Radial distribution function (RDF) analysis: the RDF profiles of the wild-type and mutant are generally similar. (C) Principal component analysis (PCA) projection of feature vectors. (D) Covariance analysis of wild-type NdmB. (E) Covariance analysis of the mutant: in comparison, the mutant shows more concentrated positive covariance, and the areas of negative covariance in NdmB<sup>Q289T</sup> are reduced, indicating that atomic movement is more consistent and coordinated throughout the simulation, potentially contributing to increased structural stability. (F) Analysis of atoms near caffeine. (G) Visualization of the binding pocket in wild-type NdmB. (H) Visualization of the binding pocket in NdmB<sup>Q289T</sup>.</p>
+                <p>The polar repulsion and hydrogen bond interactions between NdmB and the structure of methylxanthine together regulate the positioning of the substrate at the enzyme's active site. We further conducted a hydrogen bond analysis of wild-type NdmB and the mutant NdmB<sup>Q289T</sup>. The results showed that hydrogen bonds in wild-type NdmB primarily formed between 5000–7500 ps and 8500–10000 ps (Figure 9A). During the first 10000 ps, the amino hydrogen on the R-group of NdmB<sup>Q289T</sup> formed hydrogen bonds multiple times with the carbonyl group of caffeine, and the carbonyl groups frequently generated repulsive forces, preventing caffeine from approaching the active site (Figure 9B). Since caffeine could not reach the active site, it shifted in another direction and eventually bound to a nearby pocket region (5568 ps), where it stabilized. However, this pocket was separated from the non-heme iron in the active center by other amino acid residues, making it difficult for caffeine to contact the non-heme iron at this location (Figure 9C). In contrast, hydrogen bonds in the mutant NdmB<sup>Q289T</sup> were easily stabilized after 40000 ps (Figure 9D). NdmB<sup>Q289T</sup> rarely formed hydrogen bonds with caffeine, and the spatial hindrance was minimal, allowing caffeine to enter the pocket smoothly and approach the active site near the non-heme iron. Once caffeine entered the active site, the amino hydrogen on residue R170 formed hydrogen bonds with caffeine's carbonyl group, preventing it from moving away from the non-heme iron (Figure 9E). Besides not obstructing caffeine from entering the pocket, NdmB<sup>Q289T</sup> could also generate repulsive forces when caffeine attempted to leave the pocket, thereby hindering its exit (Figure 9F).</p>
+                <img src = "..\stactic\images\result_img\result9.png"  style="width: 54vw; height: auto;">
+                <p>Figure 9. Hydrogen Bond Analysis (A) Hydrogen bonds in wild-type NdmB. (B) Structure of wild-type NdmB with caffeine at 5202 ps: the amino hydrogen of Q289 forms hydrogen bonds multiple times with the carbonyl group of caffeine, preventing caffeine from approaching the active site. (C) Structure of wild-type NdmB with caffeine at 5568 ps: caffeine cannot approach the active site and shifts to bind in another pocket region, but is unable to contact the non-heme iron. (D) Hydrogen bonds in mutant NdmB<sup>Q289T</sup>. (E) Structure of mutant NdmB<sup>Q289T</sup> with caffeine at 45060 ps: 289T forms almost no hydrogen bonds with caffeine, allowing caffeine to smoothly enter the pocket and approach the non-heme iron. (F) Structure of mutant NdmB<sup>Q289T</sup> with caffeine at 48410 ps.</p>
+            </div>
+
+            <div class="container01 section1" id="side3">
+                <div class="h1">3. Optimization of Metabolic Pathways to Increase PX Yield</div>
+                <p >Promoter optimization is a key strategy to improve metabolic pathways, particularly the -10 region, which plays a crucial role in RNA polymerase binding and transcription initiation<sup>3</sup>. In this study, we performed random mutagenesis in the six bases of the -10 region of the pJ23107 promoter, followed by screening using a wholecell biosensor. Next, we selected the strains with the highest activity for larger-scale fermentation and analyzed their methylxanthine production. The results demonstrated that under conditions of 200 OD and 40 mM substrate concentration, the PX yield of
+                    the E8 strain reached 5.42 g/L, which represents a 4.4-fold increase compared to the NdmB<sup>Q289T</sup>
+                    mutant without metabolic engineering, and a 29-fold improvement over the highest reported PX  yield to date. These findings highlight the success of optimizing metabolic pathways (Figure 10).</p>
+                    <img src = "..\stactic\images\result_img\result10.png"  style="width: 54vw; height: auto;">
+                <p>Figure 10. Promoter -10 Region Mutant Screening and PX Yield Analysis. (A) Screening results of the promoter -10 region mutants. The orange bars indicate strains with OD<sub>600</sub> values higher than 1.0. Due to using NdmB<sup>Q289T</sup> as a template, the overall OD<sub>600</sub> values were generally higher during the screening. (B) Twenty strains with OD<sub>600</sub> values greater than 1.0 were selected, and their PX yields were measured using HPLC. (C) Further large-scale culture experiments were conducted on four outstanding mutants (D8, F6, D4, E8). Under conditions with OD<sub>600</sub> of 100 and a substrate concentration of 20 mM, the PX yield of E8 reached 15.62 ± 0.13 mM, representing an approximately 45% increase compared to the original NdmB<sup>Q289T</sup>. (D) Under conditions with OD<sub>600</sub> of 200 and a substrate concentration of 40 mM, the PX yield of the E8 strain further increased to 30.11 ± 0.23 mM, a 50% improvement over the original NdmB<sup>Q289T</sup>.</p>
+            </div>
+
+            <div class="container01 section1" id="side4">
+                <div class="h1">References</div>
+                <p >1. Wu, Z., Kan, S. B. J., Lewis, R. D., Wittmann, B. J., & Arnold, F. H, Machine learning-assisted directed protein evolution with combinatorial libraries.Proceedings of the National Academy of Sciences, 116(18), 8852–8858, (2019).<br><a href="https://doi.org/10.1073/pnas.1901979116" style="color: rgb(83, 84, 84);font-size: large;">DOI: https://doi.org/10.1073/pnas.1901979116</a></br></p>
+                <p >2. Ishida, T, Effects of Point Mutation on Enzymatic Activity: Correlation between Protein Electronic Structure and Motion in Chorismate Mutase Reaction. Journal of the American Chemical Society, 132(20), 7104–7118, (2010).<br><a href="https://doi.org/10.1021/ja100744h" style="color: rgb(83, 84, 84);font-size: large;">DOI: https://doi.org/10.1021/ja100744h</a></br></p>
+                <p >3. Zhou, C., Ye, B., Cheng, S., Zhao, L., Liu, Y., Jiang, J., & Yan, X, Promoter engineering enables overproduction of foreign proteins from a single copy expression cassette in Bacillus subtilis. Microbial Cell Factories, 18(1), 111–121,(2019).<br><a href="https://doi.org/10.1186/s12934-019-1159-0" style="color: rgb(83, 84, 84);font-size: large;">DOI: https://doi.org/10.1186/s12934-019-1159-0</a></br></p>
+            </div>
+    
+        </div>
+        
+    </div> 
+
+
+
+
+    <footer>
+		<div>
+			<div class="c-footer">
+				<div class="u-container">
+					<div class="u-hide-print">
+						<div class="c-footer__header">
+						</div>
+						<div class="c-footer__grid">
+							<div class="c-footer__group">
+								<h3 class="c-footer__heading">About us</h3>
+								<ul class="c-footer__list">
+									<li class="c-footer__item"><a href="#" data-track="click">
+                                        This team is composed of enthusiastic students from five different colleges and various majors. To spy out the secrets of directed evolution, a group of beginners are looking forward to creating extraordinary experiences and we did it.</a></li>
+								</ul>
+							</div>
+							<div class="c-footer__group">
+								<h3 class="c-footer__heading">About topic</h3>
+								<ul class="c-footer__list">
+									<li class="c-footer__item"><a href="#" data-track="click"> Directed Evolution of the NdmB Enzyme for the Synthesis of Paraxanthine.
+										</a></li>
+								</ul>
+							</div>
+							<div class="c-footer__group">
+								<h3 class="c-footer__heading">Quicklinks</h3>
+								<ul class="c-footer__list">
+									<li class="c-footer__item"><a href="background.html"
+											data-track="click" target="_blank">Background</a></li>
+									<li class="c-footer__item"><a href="design.html"
+											data-track="click" target="_blank">Design</a></li>
+									<li class="c-footer__item"><a href="result.html"
+											data-track="click" target="_blank">Result</a></li>
+								</ul>
+							</div>
+							<div class="c-footer__group">
+								<h3 class="c-footer__heading">Contact info</h3>
+								<ul class="c-footer__list">
+									<li class="c-footer__item"><a href="#" data-track="click">
+                                        Email : iDEC-2024 NEFU_China</a></li>
+									<li class="c-footer__item"><a href="#" data-track="click">
+                                        Address : Northeast Forestry University, Harbin, Heilongjiang 150040, P. R. China</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="c-corporate-footer">
+			<div class="u-container">
+				<p class="c-corporate-footer__legal">iDEC-2024 NEFU_China</p>
+			</div>
+		</div>
+	</footer>
+    
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const sideLinks = document.querySelectorAll('.broadside a');
+            const broadsideContainer = document.querySelector('.broadside');
+            const styleMap = {
+                'side1': { fontSize: '1.68vw', color: '#ff8f78', display: 'block'},
+                'side2': { fontSize: '1.68vw', color: '#ff8f78', display: 'block'},
+                'side3': { fontSize: '1.68vw', color: '#ff8f78', display: 'block'},
+                'side4': { fontSize: '1.68vw', color: '#ff8f78', display: 'block'},
+                
+        
+        
+            };
+        
+            // Smooth scroll to target section
+            sideLinks.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        
+            let activeSectionId1 = null;
+            let activeSectionId2 = null;
+        
+            // Function to check scroll position and highlight the corresponding link
+            function checkScroll() {
+                const windowHeight = window.innerHeight;
+                const triggerPoint = windowHeight * 0.2; // Trigger point for activation
+            
+                let newActiveSectionId1 = null;
+                let newActiveSectionId2 = null;
+            
+                document.querySelectorAll('.section1').forEach(section => {
+                    const rect = section.getBoundingClientRect();
+                    const sectionTop = rect.top;
+                    const sectionBottom = rect.bottom;
+            
+                    if (sectionTop <= triggerPoint && sectionBottom >= triggerPoint) {
+                        newActiveSectionId1 = section.id;
+                    }
+                });
+            
+                document.querySelectorAll('.section2').forEach(section => {
+                    const rect = section.getBoundingClientRect();
+                    const sectionTop = rect.top;
+                    const sectionBottom = rect.bottom;
+            
+                    if (sectionTop <= triggerPoint && sectionBottom >= triggerPoint) {
+                        newActiveSectionId2 = section.id;
+                    }
+                });
+            
+                if (newActiveSectionId1 !== activeSectionId1 || newActiveSectionId2 !== activeSectionId2) {
+                    // 如果到section
+                    if (newActiveSectionId1 || newActiveSectionId2) {
+                        broadsideContainer.style.position = 'fixed';
+                        broadsideContainer.style.marginTop = '16vh';
+                        broadsideContainer.style.marginRight = '1.1vh';
+        
+                    } else {
+                        broadsideContainer.style.position = ''; 
+                        broadsideContainer.style.marginTop = '';
+                        broadsideContainer.style.marginRight = '';
+                    }
+        
+                    sideLinks.forEach(link => {
+                        const linkId = link.getAttribute('href').substring(1);
+                        const styles = styleMap[linkId];
+            
+                        if (linkId === newActiveSectionId1 || linkId === newActiveSectionId2) {
+                            link.style.fontSize = styles.fontSize;
+                            link.style.color = styles.color;
+                            link.style.display = styles.display; 
+                            link.style.position = styles.position; 
+                            link.style.marginTop = styles.marginTop;
+                            link.style.marginRight = styles.marginRight;
+        
+                        }
+                        else {
+                            link.style.fontSize = '';
+                            link.style.color = '';
+                            link.style.display = ''; // Reset display property
+                        }
+                        if (linkId.startsWith('side1') && newActiveSectionId1 && newActiveSectionId1.startsWith('side1')) {
+                            // 有以 side1 开头的链接（包括 side1_1、side1_2、side1_3 和 side1_4）都会应用 side1 的样式
+                            const side1Styles = styleMap['side1'];
+                            link.style.display = side1Styles.display;
+                        } 
+                        else if (linkId.startsWith('side2') && newActiveSectionId1 && newActiveSectionId1.startsWith('side2')) {
+                            const side3Styles = styleMap['side2'];
+                            link.style.display = side3Styles.display;
+                        }
+                        else if (linkId.startsWith('side3') && newActiveSectionId1 && newActiveSectionId1.startsWith('side3')) {
+                            const side3Styles = styleMap['side3'];
+                            link.style.display = side3Styles.display;
+                        }
+                        else if (linkId.startsWith('side4') && newActiveSectionId1 && newActiveSectionId1.startsWith('side4')) {
+                            const side4Styles = styleMap['side4'];
+                            link.style.display = side4Styles.display;
+                        }           
+                        else {
+                            link.style.fontSize = '';
+                            link.style.color = '';
+                            link.style.display = ''; // Reset display property
+                        }
+                    });
+        
+                    activeSectionId1 = newActiveSectionId1;
+                    activeSectionId2 = newActiveSectionId2;
+                }
+            }
+            
+            // Function to check window width and adjust broadside visibility
+            function checkWindowWidth() {
+                const windowWidth = window.innerWidth;
+                if (windowWidth <= 1050) {//   媒体查询->小于1050px
+                    broadsideContainer.style.display = 'none'; // 隐藏 broadside
+                    window.removeEventListener('scroll', checkScroll); // 停止滚动事件监听
+                } else {
+                    broadsideContainer.style.display = 'block'; // 显示 broadside
+                    window.addEventListener('scroll', checkScroll); // 重新启动滚动事件监听
+                    checkScroll(); // 刷新 JS 程序状态
+                }
+            }
+        
+            // Listen for window resize events
+            window.addEventListener('resize', checkWindowWidth);
+            checkWindowWidth(); // Initial check on page load
+        
+        
+        
+            // Initial scroll check
+            checkScroll(); 
+        });
+        
+            </script>
+
+</body>
+
+<script src="..\js\mouse2.js"></script>
+<script src="..\js\progress-bar.js"></script>
+<script src="..\js\top_button.js"></script>
+<script src="..\js\shadow.js"></script>
+<script src="..\js\nav.js"></script>
+<script src="..\js\loading.js"></script>
+
+
+</html> 
