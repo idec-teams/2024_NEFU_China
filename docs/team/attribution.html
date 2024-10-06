@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iDEC NEFU_China 2024</title>
+    <link rel="stylesheet" href="..\css\mouse2.css">
+    <link rel="stylesheet" href="..\css\broadside.css">
+    <link rel="stylesheet" href="..\css\progress-bar.css">
+    <link rel="stylesheet" href="..\css\top_button.css">
+    <link rel="stylesheet" href="..\css\shadow.css">
+    <link rel="stylesheet" href="..\css\nav.css">
+    <link rel="stylesheet" href="..\css\footer.css">
+    <link rel="stylesheet" href="..\css\member.css">
+    <link rel="stylesheet" href="..\css\member_img.css">
+    <link rel="stylesheet" href="..\css\loading.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            overflow-x: hidden;
+            flex-direction: column; /* 垂直布局 */
+            min-height: 100vh; /* 确保 body 至少占据视口高度 */
+            justify-content: flex-start; /* 从顶部开始排列内容 */
+            align-items: center; /* 中心对齐内容 */
+            background-color: #e3f4fc;
+            background-size: cover;
+            max-width: 100%;
+            /*font-family: Nunito-Reg, sans-serif;*/
+            font-weight: 400;
+            font-size: 18px;
+            /*font-family: Comic Sans Ms, sans-serif;*/
+            color: #000000;
+        }
+        img {
+            display: inline-block;
+            vertical-align: middle;
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+        }
+        .img2 {
+            display: inline-block;
+            margin: 0 auto;
+            text-align: center;
+            gap: 20px;
+            height: auto;
+        }
+        .container {/*框架*//*最外层盒子*/
+            display: flex;
+            width: 65vw;
+            height: auto;/*似乎这个值没用，会被撑大*//*要管*/
+            max-width: 65vw; /* 设置内容区域的最大宽度 */
+            margin-left: 49.5vh;
+            background-color: transparent;
+            /*padding: 20px; /* 内容内边距 */
+            /*padding-top: 80px;/*80*/
+
+            box-sizing: border-box;
+            z-index: 2;
+        }
+
+        .container_block{
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            padding: 5vw;
+            padding-top: 2vw;
+            border-radius: 1vw;
+            border: 2px solid #7fb4ea; 
+            backdrop-filter: blur(15px) saturate(130%); 
+
+        }
+        .container0{
+            width: 100%;  
+            height: auto;
+           /* max-width: 100vw; */
+            margin-top: 0vh;
+            margin-bottom: 0vh; 
+            align-items: center;
+            /*gap: 1vw;  must kill*/
+            z-index: 3;
+            background: #ffffff;
+            display: flex;
+            flex-direction: column;
+        }
+        .container01{
+            width: 100%;
+            max-width: 70vw;
+            margin-left: 0vw;
+            /*align-items: center;*/
+            gap: 1vw;
+            display: flex;
+            flex-direction: column;
+        }
+        .container02{
+            width: 100%;
+            /*max-width: 70vw;*/
+            margin-left: 0vw;
+            margin-top: 2vw;
+           /* align-items: center;*/
+            gap: 1vw;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        p {
+           
+            max-width: 60vw;
+            margin-top: 1vw;
+            font-size: 1.5vw; 
+            /*font-family: Comic Sans Ms, sans-serif;*/
+            text-align: justify;
+            font-style: normal;
+            line-height: normal;
+        }
+        ol{
+            
+            list-style-position: inside; /* 列表样式在内侧 */
+        }
+        ol li {
+            max-width: 65vw;
+            margin-top: 1vw;
+            font-size: 1.5vw; 
+            text-align: justify;
+            /*font-family: Comic Sans Ms, sans-serif;*/
+        }
+        .h1{
+            justify-content: center;
+            text-align: left;
+            max-width: 60vw;
+            margin-top:2vw;
+            font-size: 3.0vw;
+            font-weight: 600;
+            color: #35488f;
+            letter-spacing: 0.5vh;
+            text-shadow: 0.1vh 0.1vh 0 #000000, 0.2vh 0.2vh 0 #000000, 0.2vh 0.2vh 0 #000000;
+
+        }
+        .h2{
+            color: #7fb4ea;
+            text-align: left;
+            font-weight: 600;
+            font-size: 2.4vw;
+            margin-top:0.5vw;
+            margin-bottom: 0;
+            /*font-family: Montserrat-Mid; */
+        
+        }
+        .h3{ 
+            margin-top: 2vh;
+            font-size: 1.7vw; 
+            /*font-family: Montserrat-Mid; */
+
+        }
+        @media (max-width: 1050px) {
+            .container {
+                margin-left: 0;
+                width: 90vw;
+                max-width: 90vw;
+            }
+            .broadside{
+                display: none;
+            }
+            .h1,h2,p,ol li{
+                max-width: 80vw;
+            }
+
+        }
+
+        .broadside{
+            margin-top: 68vw;
+        }
+
+    </style>
+</head>
+<body>
+
+    
+    <div class="ripple"></div>
+    
+    <div id="progress-bar"></div>
+
+    <div class="top_button">
+        <img src = "..\stactic\images\topimgs\top.png"  style="width: 15vw; height: auto; margin-left: -0.3vw;"> 
+        <a href="" class="top_button" id="top_button"></a>
+    </div>
+    
+
+
+    <div class="loading">
+        <div class="loading_background"></div>
+        <div class="groups">
+            <img src = "..\stactic\images\loading_img\loading1.png"  style="width: 50vw; height: auto;">
+            <div class="loadingss">
+                <div class="load_text">
+                    <div class="load_letter" style="animation-delay: 0s;">L</div>
+                    <div class="load_letter" style="animation-delay: 0.1s;">O</div>
+                    <div class="load_letter" style="animation-delay: 0.2s;">A</div>
+                    <div class="load_letter" style="animation-delay: 0.3s;">D</div>
+                    <div class="load_letter" style="animation-delay: 0.4s;">I</div>
+                    <div class="load_letter" style="animation-delay: 0.5s;">N</div>
+                    <div class="load_letter" style="animation-delay: 0.6s;">G</div>
+                    <div class="load_letter" style="animation-delay: 0.7s;"><img src = "..\stactic\images\loading_img\loading2.png"  style="width: 11vw; height: auto;">  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="header" class="nav_header">
+        <div class="logo" style="margin-left: 3vw;"> 
+            <img src = "..\stactic\images\idec_img\logo.png"  style="width: 9vw; height: auto;"> 
+        </div>  
+        <nav>
+            <ul>
+                <li class="dropdown">
+                    <a href="https://idec-teams.github.io/2024_NEFU_China/" class="nav_ul_li_a">Home</a> 
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="nav_ul_li_a">Team</a>
+                    <ul class="nav_ul_li_a_ul">
+                        <li><a href="member.html">Members</a></li>
+                        <li><a href="attribution.html">Attribution</a></li>
+                    </ul>        
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="nav_ul_li_a">Project</a>
+                    <ul class="nav_ul_li_a_ul">
+                        <li><a href="..\project\background.html">Background</a></li>
+                        <li><a href="..\project\design.html">Design</a></li>
+                        <li><a href="..\project\result.html">Result</a></li>
+                        <li><a href="..\stactic\pdf\report\Report.pdf" target="_blank">Report</a></li>
+                        <li><a href="..\stactic\pdf\Supplementary Materials\Supplementary Materials.pdf"  target="_blank">Supplementary Information</a></li>
+                    </ul>        
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="nav_ul_li_a">Documentation</a>     
+                    <ul class="nav_ul_li_a_ul">
+                        <li><a href="..\documentation\notebook.html">Notebook</a></li>
+                        <li><a href="..\documentation\safety.html">Safety</a></li>
+                        <li><a href="..\documentation\protocol.html">Protocol</a></li>
+                    </ul>  
+                </li>
+                
+            </ul>
+        </nav>
+        <div id="menu-icon"><span class="first"></span><span class="second"></span><span class="third"></span></div>
+    </div>
+
+
+
+
+    <div class="broadside" >
+        <a class="broadside_element side1" href="#side1"  >
+            Our Team
+            <div class="submenu"></div>
+        </a>
+
+        <a class="broadside_element side2" href="#side2">
+            Mentor
+            <div class="submenu"></div>
+        </a>
+
+        <a class="broadside_element side3" href="#side3">
+            Supevisor
+            <div class="submenu"></div>
+        </a>
+
+        <a class="broadside_element side4" href="#side4">
+            Advisor
+            <div class="submenu"></div>
+        </a>
+
+        <a class="broadside_element side5" href="#side5">
+            Special Thanks
+            <div class="submenu"></div>
+        </a>
+        
+    </div>
+
+    <div>
+        <img src = "..\stactic\images\member_img\group1.jpg"  style="width: 100vw; height: auto;"> 
+    </div>
+
+    <div style="height: 1vw;width: 100vw;"></div>
+
+    <div class="container">
+        
+        <div class="container0 container_block">   
+            
+            <div class="container01 section1" id="side1">
+                <div class="h1">Our Team</div>
+                <img src = "..\stactic\images\attribution_img\attribution.jpg"  style=" height: auto; "> 
+            </div>
+
+            <div class="container01 section1" id="side2">
+                <div class="h1">Mentor</div>
+                <p><strong>Xiaoyu Zhang</strong></p>
+                <p>Guide the experimental methods and precautions to ensure the smooth development of the experiment.</p>
+                <p>Provide timely help when we encounter difficulties in our experiments.</p>
+            </div>
+
+            <div class="container01 section1" id="side3">
+                <div class="h1">Supevisor</div>
+                <p><strong>Pengchao Wang</strong></p>
+                <p>Provided advice and insight on the project</p>
+                <p>Provided lab space, materials, and equipment</p>
+                <p>Provided support in experimental technology</p>
+                <p>Provided advice on presentation, poster, paper, Wiki and so on</p>
+                <p>Provided valuable insights on experiments design</p>
+            </div>
+
+            <div class="container01 section1" id="side4">
+                <div class="h1">Advisor</div>
+                <p><strong>Guangchao Sui</strong></p>
+                <p>Provided advice and insight on the project</p>
+                <p>Provided advice on presentation</p>
+                <p>Provided valuable insights on experiments design</p>
+                <p><strong>Wei Meng</strong></p>
+                <p>Provided advice and insight on the project</p>
+                <p>Provided advice on presentation</p>
+                <p>Provided valuable insights on experiments design</p>
+            </div>
+            
+            <div class="container01 section1" id="side5">
+                <div class="h1">Special Thanks</div>
+                <p>This work was supported by funding from Northeast Forestry University. We sincerely thank the strong support from the College of Life Sciences and the Aulin College, Northeast Forestry University. We are grateful for the experimental platform provided by the university, the guidance of our teachers, and the assistance of our mentors.</p>
+            </div>
+    
+        </div>
+        
+    </div> 
+
+    <div style="height: 3vw;width: 100vw;"></div>
+
+    <footer>
+		<div>
+			<div class="c-footer">
+				<div class="u-container">
+					<div class="u-hide-print">
+						<div class="c-footer__header">
+						</div>
+						<div class="c-footer__grid">
+							<div class="c-footer__group">
+								<h3 class="c-footer__heading">About us</h3>
+								<ul class="c-footer__list">
+									<li class="c-footer__item"><a href="#" data-track="click">
+                                        This team is composed of enthusiastic students from five different colleges and various majors. To spy out the secrets of directed evolution, a group of beginners are looking forward to creating extraordinary experiences and we did it.</a></li>
+								</ul>
+							</div>
+							<div class="c-footer__group">
+								<h3 class="c-footer__heading">About topic</h3>
+								<ul class="c-footer__list">
+									<li class="c-footer__item"><a href="#" data-track="click"> Directed Evolution of the NdmB Enzyme for the Synthesis of Paraxanthine.
+										</a></li>
+								</ul>
+							</div>
+							<div class="c-footer__group">
+								<h3 class="c-footer__heading">Quicklinks</h3>
+								<ul class="c-footer__list">
+									<li class="c-footer__item"><a href="..\project\background.html"
+											data-track="click" target="_blank">Background</a></li>
+									<li class="c-footer__item"><a href="..\project\design.html"
+											data-track="click" target="_blank">Design</a></li>
+									<li class="c-footer__item"><a href="..\project\result.html"
+											data-track="click" target="_blank">Result</a></li>
+								</ul>
+							</div>
+							<div class="c-footer__group">
+								<h3 class="c-footer__heading">Contact info</h3>
+								<ul class="c-footer__list">
+									<li class="c-footer__item"><a href="#" data-track="click">
+                                        Email : iDEC-2024 NEFU_China</a></li>
+									<li class="c-footer__item"><a href="#" data-track="click">
+                                        Address : Northeast Forestry University, Harbin, Heilongjiang 150040, P. R. China</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="c-corporate-footer">
+			<div class="u-container">
+				<p class="c-corporate-footer__legal">iDEC-2024 NEFU_China</p>
+			</div>
+		</div>
+	</footer>
+    
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const sideLinks = document.querySelectorAll('.broadside a');
+            const broadsideContainer = document.querySelector('.broadside');
+            const styleMap = {
+                'side1': { fontSize: '1.7vw', color: '#ff8f78', display: 'block'},
+                'side2': { fontSize: '1.7vw', color: '#ff8f78', display: 'block'},
+                'side3': { fontSize: '1.7vw', color: '#ff8f78', display: 'block'},
+                'side4': { fontSize: '1.7vw', color: '#ff8f78', display: 'block'},
+                'side5': { fontSize: '1.7vw', color: '#ff8f78', display: 'block'}
+        
+        
+            };
+        
+            // Smooth scroll to target section
+            sideLinks.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        
+            let activeSectionId1 = null;
+            let activeSectionId2 = null;
+        
+            // Function to check scroll position and highlight the corresponding link
+            function checkScroll() {
+                const windowHeight = window.innerHeight;
+                const triggerPoint = windowHeight * 0.2; // Trigger point for activation
+            
+                let newActiveSectionId1 = null;
+                let newActiveSectionId2 = null;
+            
+                document.querySelectorAll('.section1').forEach(section => {
+                    const rect = section.getBoundingClientRect();
+                    const sectionTop = rect.top;
+                    const sectionBottom = rect.bottom;
+            
+                    if (sectionTop <= triggerPoint && sectionBottom >= triggerPoint) {
+                        newActiveSectionId1 = section.id;
+                    }
+                });
+            
+                document.querySelectorAll('.section2').forEach(section => {
+                    const rect = section.getBoundingClientRect();
+                    const sectionTop = rect.top;
+                    const sectionBottom = rect.bottom;
+            
+                    if (sectionTop <= triggerPoint && sectionBottom >= triggerPoint) {
+                        newActiveSectionId2 = section.id;
+                    }
+                });
+            
+                if (newActiveSectionId1 !== activeSectionId1 || newActiveSectionId2 !== activeSectionId2) {
+                    // 如果到section
+                    if (newActiveSectionId1 || newActiveSectionId2) {
+                        broadsideContainer.style.position = 'fixed';
+                        broadsideContainer.style.marginTop = '16vh';
+                        broadsideContainer.style.marginRight = '1.1vh';
+        
+                    } else {
+                        broadsideContainer.style.position = ''; 
+                        broadsideContainer.style.marginTop = '';
+                        broadsideContainer.style.marginRight = '';
+                    }
+        
+                    sideLinks.forEach(link => {
+                        const linkId = link.getAttribute('href').substring(1);
+                        const styles = styleMap[linkId];
+            
+                        if (linkId === newActiveSectionId1 || linkId === newActiveSectionId2) {
+                            link.style.fontSize = styles.fontSize;
+                            link.style.color = styles.color;
+                            link.style.display = styles.display; 
+                            link.style.position = styles.position; 
+                            link.style.marginTop = styles.marginTop;
+                            link.style.marginRight = styles.marginRight;
+        
+                        }
+                        else {
+                            link.style.fontSize = '';
+                            link.style.color = '';
+                            link.style.display = ''; // Reset display property
+                        }
+                        if (linkId.startsWith('side1') && newActiveSectionId1 && newActiveSectionId1.startsWith('side1')) {
+                            // 有以 side1 开头的链接（包括 side1_1、side1_2、side1_3 和 side1_4）都会应用 side1 的样式
+                            const side1Styles = styleMap['side1'];
+                            link.style.display = side1Styles.display;
+                        } 
+                        else if (linkId.startsWith('side2') && newActiveSectionId1 && newActiveSectionId1.startsWith('side2')) {
+                            const side3Styles = styleMap['side2'];
+                            link.style.display = side3Styles.display;
+                        }
+                        else if (linkId.startsWith('side3') && newActiveSectionId1 && newActiveSectionId1.startsWith('side3')) {
+                            const side3Styles = styleMap['side3'];
+                            link.style.display = side3Styles.display;
+                        }
+                        else if (linkId.startsWith('side4') && newActiveSectionId1 && newActiveSectionId1.startsWith('side4')) {
+                            const side4Styles = styleMap['side4'];
+                            link.style.display = side4Styles.display;
+                        }   
+                        else if (linkId.startsWith('side5') && newActiveSectionId1 && newActiveSectionId1.startsWith('side5')) {
+                            const side4Styles = styleMap['side5'];
+                            link.style.display = side4Styles.display;
+                        }            
+                        else {
+                            link.style.fontSize = '';
+                            link.style.color = '';
+                            link.style.display = ''; // Reset display property
+                        }
+                    });
+        
+                    activeSectionId1 = newActiveSectionId1;
+                    activeSectionId2 = newActiveSectionId2;
+                }
+            }
+            
+            // Function to check window width and adjust broadside visibility
+            function checkWindowWidth() {
+                const windowWidth = window.innerWidth;
+                if (windowWidth <= 1050) {//   媒体查询->小于1050px
+                    broadsideContainer.style.display = 'none'; // 隐藏 broadside
+                    window.removeEventListener('scroll', checkScroll); // 停止滚动事件监听
+                } else {
+                    broadsideContainer.style.display = 'block'; // 显示 broadside
+                    window.addEventListener('scroll', checkScroll); // 重新启动滚动事件监听
+                    checkScroll(); // 刷新 JS 程序状态
+                }
+            }
+        
+            // Listen for window resize events
+            window.addEventListener('resize', checkWindowWidth);
+            checkWindowWidth(); // Initial check on page load
+        
+        
+        
+            // Initial scroll check
+            checkScroll(); 
+        });
+        
+            </script>
+
+</body>
+
+<script src="..\js\mouse2.js"></script>
+<script src="..\js\progress-bar.js"></script>
+<script src="..\js\top_button.js"></script>
+<script src="..\js\shadow.js"></script>
+<script src="..\js\nav.js"></script>
+<script src="..\js\loading.js"></script>
+
+
+
+</html> 
